@@ -4,7 +4,7 @@ import "./globals.css";
 import { AntdRegistry } from "@ant-design/nextjs-registry";
 import HeaderLayout from "@/layouts/Header/app.header";
 import FooterLayout from "@/layouts/Footer/app.footer";
-
+import ThemeRegistry from "@/theme-registry/theme.registry";
 export default function RootLayout({
   children,
 }: {
@@ -14,9 +14,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <AntdRegistry>
-          <HeaderLayout />
-          {children}
-          <FooterLayout />
+          <ThemeRegistry>
+            <HeaderLayout />
+            {children}
+            <FooterLayout />
+          </ThemeRegistry>
         </AntdRegistry>
       </body>
     </html>

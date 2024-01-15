@@ -23,6 +23,7 @@ export const sendRequest = async <T>(props: IRequest) => {
   if (queryParams) {
     url = `${url}?${queryString.stringify(queryParams)}`;
   }
+    console.log("🚀 ~ sendRequest ~ url:", url)
 
   return fetch(url, options).then((res) => {
     if (res.ok) {
