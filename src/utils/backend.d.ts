@@ -13,6 +13,14 @@ declare global {
     headers?: any;
     nextOption?: any;
   }
+  interface IBackendRes<T> {
+    // slice(start: number, end: number): unknown;
+    error?: string | string[];
+    message: string;
+    filteredProductCount?: number;
+    statusCode?: number | string;
+    products?: T;
+  }
   interface IProduct {
     _id: string;
     name: string;
@@ -28,13 +36,6 @@ declare global {
     __v: number;
     createdAt: string;
     updatedAt: string;
-  }
-  interface IBackendRes<T> {
-    error?: string | string[];
-    message: string;
-    filteredProductCount?: number;
-    statusCode?: number | string;
-    products?: T;
   }
   //   interface IModelPaginate<T> {
   //     meta: {
