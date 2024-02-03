@@ -16,70 +16,9 @@ interface IProps {
 }
 
 const MainHomeLayout = (props: IProps) => {
-  // console.log("🚀 ~ MainHomeLayout ~ props:", props);
-  // const NextArrow = (props: any) => {
-  //   return (
-  //     <ButtonMUI
-  //       variant="outlined"
-  //       onClick={props.onClick}
-  //       sx={{
-  //         position: "absolute",
-  //         backgroundColor: "#f2f2f2",
-  //         color: "black",
-  //         border: "unset",
-  //         right: 0,
-  //         top: "45%",
-  //         zIndex: 2,
-  //         minWidth: 30,
-  //         width: 50,
-  //         ":hover": {
-  //           border: "unset",
-  //           backgroundColor: "#f2f2f2",
-  //         },
-  //       }}
-  //     >
-  //       <ChevronRightIcon />
-  //     </ButtonMUI>
-  //   );
-  // };
-
-  // const PrevArrow = (props: any) => {
-  //   return (
-  //     <ButtonMUI
-  //       variant="outlined"
-  //       onClick={props.onClick}
-  //       sx={{
-  //         position: "absolute",
-  //         top: "45%",
-  //         backgroundColor: "#f2f2f2",
-  //         color: "black",
-  //         border: "unset",
-  //         zIndex: 2,
-  //         minWidth: 50,
-  //         width: 30,
-  //         ":hover": {
-  //           border: "unset",
-  //           backgroundColor: "#f2f2f2",
-  //         },
-  //       }}
-  //     >
-  //       <ChevronLeftIcon />
-  //     </ButtonMUI>
-  //   );
-  // };
-
-  // const settings: Settings = {
-  //   infinite: true,
-  //   speed: 500,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   nextArrow: <NextArrow />,
-  //   prevArrow: <PrevArrow />,
-  // };
   return (
     <div className="min-h-[550px] pt-[50px] max-w-[1000px] mx-auto">
       <div className="text-[30px] mb-5">Danh Sách Sản Phẩm</div>
-      {/* <Slider {...settings}> */}
       <div className="list-product grid grid-cols-3 gap-3">
         {props.data.map((product) => {
           return (
@@ -89,7 +28,7 @@ const MainHomeLayout = (props: IProps) => {
                   <Image
                     height={100}
                     className="object-cover"
-                    width={200}
+                    width={250}
                     src={product?.images[1]?.url}
                     alt="Image Product"
                   />
@@ -117,7 +56,6 @@ const MainHomeLayout = (props: IProps) => {
         })}
       </div>
       <PaginationComponent total={props.filteredProductCount} />
-      {/* </Slider> */}
     </div>
   );
 };

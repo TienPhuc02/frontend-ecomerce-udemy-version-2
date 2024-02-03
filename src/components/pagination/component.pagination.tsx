@@ -28,7 +28,7 @@ const PaginationComponent = (props: IProps) => {
           defaultPageSize={3}
           showSizeChanger
           showQuickJumper
-          pageSizeOptions={[4, 6, 8]}
+          pageSizeOptions={[3, 6, 8]}
         />
       </div>
     </div>
